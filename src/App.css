@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Fredericka+the+Great&family=Inter&family=Kanit&family=Zen+Dots&display=swap');
 .App {
   text-align: center;
 }
@@ -36,3 +37,10 @@
     transform: rotate(360deg);
   }
 }
+body
+{
+  background: #edf2f7;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
