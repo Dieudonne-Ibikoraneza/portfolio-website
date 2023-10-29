@@ -100,7 +100,7 @@ const SimpleForm = () => {
             onChange={handleInputChange}
             placeholder="Email Address"
           />
-          <AiOutlineMail className="absolute bottom-[18.4rem] left-[31.2%]"/>
+          <AiOutlineMail className="absolute bottom-[19.6rem] left-[31.2%]"/>
         </div>
 
         <div className="flex flex-col -top-11 relative">
