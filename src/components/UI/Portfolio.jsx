@@ -1,30 +1,41 @@
 import data from "../../assets/data/portfolioData";
 import { useState, useEffect } from "react";
+import Modal from "./Modal";
 
 const Portfolio = () => {
   const [nextItems, setNextItems] = useState(6);
   const [portfolios, setPortfolios] = useState(data);
-  const [selectTab, setSelectTab] = useState('all');
+  const [selectTab, setSelectTab] = useState("all");
+  const [showModal, setShowModal] = useState(false);
+  const [activeID, setActiveID] = useState(null);
 
-useEffect(()=> {
-  if (selectTab === 'all') {
-    setPortfolios(data);
-}
+  useEffect(() => {
+    if (selectTab === "all") {
+      setPortfolios(data);
+    }
 
-  if (selectTab === 'web-design') {
-  const filteredData = data.filter(item=>item.category==='Web Design')
-  setPortfolios(data);
-}
-  
-if (selectTab === 'all') {
-  setPortfolios(data);
-}
-})
+    if (selectTab === "web-design") {
+      const filteredData = data.filter(
+        (item) => item.category === "Web Design"
+      );
+      setPortfolios(filteredData);
+    }
 
+    if (selectTab === "UX-design") {
+      const filteredData = data.filter((item) => item.category === "UX");
+      setPortfolios(filteredData);
+    }
+  }, [selectTab]);
 
   const loadMoreHandler = () => {
     setNextItems((prev) => prev + 3);
   };
+
+  const showModalHandler = id => {
+    setShowModal(true);
+    setActiveID(id);
+  };
+
   return (
     <section id="portfolio">
       <div className="container">
@@ -35,13 +46,22 @@ if (selectTab === 'all') {
             </h3>
           </div>
           <div className="flex gap-3">
-            <button className="text-smallTextColor border border-solid border-smallText-Color py-2 px-4 rounded-[8px]">
+            <button
+              onClick={() => setSelectTab("all")}
+              className="text-smallTextColor border border-solid border-smallText-Color py-2 px-4 rounded-[8px]"
+            >
               All
             </button>
-            <button className="text-smallTextColor border border-solid border-smallText-Color py-2 px-4 rounded-[8px]">
+            <button
+              onClick={() => setSelectTab("web-design")}
+              className="text-smallTextColor border border-solid border-smallText-Color py-2 px-4 rounded-[8px]"
+            >
               Web Design
             </button>
-            <button className="text-smallTextColor border border-solid border-smallText-Color py-2 px-4 rounded-[8px]">
+            <button
+              onClick={() => setSelectTab("UX-design")}
+              className="text-smallTextColor border border-solid border-smallText-Color py-2 px-4 rounded-[8px]"
+            >
               UI/UX Design
             </button>
           </div>
@@ -60,7 +80,7 @@ if (selectTab === 'all') {
               </figure>
               <div className="w-full h-full bg-primaryColor bg-opacity-40 absolute top-0 left-0 z-[5] hidden group-hover:block">
                 <div className="w-full h-full flex items-center justify-center">
-                  <button className="text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200">
+                  <button onClick={() => showModalHandler(portfolio.id)} className="text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200">
                     See Details
                   </button>
                 </div>
@@ -73,13 +93,14 @@ if (selectTab === 'all') {
           {nextItems < portfolios.length && data.length > 6 && (
             <button
               onClick={loadMoreHandler}
-              className="text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200"
+              className="text-white bg-primaryColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200"
             >
               Load More
             </button>
           )}
         </div>
       </div>
+      {showModal && <Modal setShowModal={setShowModal} activeID={activeID} />}
     </section>
   );
 };
