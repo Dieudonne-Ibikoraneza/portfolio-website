@@ -9,6 +9,7 @@ import Hero from "./components/UI/Hero";
 import Services from "./components/UI/Services";
 import Portfolio from "./components/UI/Portfolio";
 import Contact from "./components/UI/Contact";
+// import ScrollProgressIndicator from "./components/ScrollProgressIndicator";
 
 function App() {
   useEffect(() => {

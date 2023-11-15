@@ -1,8 +1,12 @@
 import React, { useRef, useEffect } from "react";
+import ScrollProgressIndicator from "../ScrollProgressIndicator";
 
 const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
+
+  const completion = ScrollProgressIndicator();
+  console.log(completion)
 
   const stickyHeaderFunc = () => {
     window.addEventListener("scroll", () => {
@@ -57,11 +61,7 @@ const Header = () => {
           </div>
           {/* ===============  logo end ============ */}
           {/* ===============  menu start  ============ */}
-          <div
-            className="menu"
-            ref={menuRef}
-            onClick={toggleMenu}
-          >
+          <div className="menu" ref={menuRef} onClick={toggleMenu}>
             <ul className="flex items-center gap-10">
               <li>
                 <a
@@ -105,9 +105,9 @@ const Header = () => {
           {/* ===============  menu right  ============ */}
 
           <div className="flex items-center gap-4">
-            <button className="flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in duration-300">
+            <a onClick={handleClick} href="#contact" className="flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in duration-300">
               <i className="ri-send-plane-line"></i>Let&apos; s Talk
-            </button>
+            </a>
             <span
               onClick={toggleMenu}
               className="text-2xl text-smallTextColor md:hidden cursor-pointer"
@@ -117,6 +117,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <span style={{transform: `translateX(${completion-100}%)`}} className="absolute bg-blue-500 h-1 w-full bottom-0" />
     </header>
   );
 };
