@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .linear-button {
+    background: #ad5389;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    border: none;
+    align-items: center;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .uiverse-svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  .uiverse-text {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  .uiverse-svg-hover {
+    transform: translateX(5px) rotate(90deg);
+  }
+}

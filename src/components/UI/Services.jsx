@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import frontendImg from "../../assets/images/front-end.png";
 import backendImg from "../../assets/images/backend.png";
@@ -12,7 +13,7 @@ const Services = () => {
           <h2 className="text-headingColor font-[800] text-[2.4rem] mb-5">
             What do I help?
           </h2>
-          <p className="lg:max-w-[600px] lg:mx-auto text-headingColor font-[500] text-[16px] leading-7">
+          <p className="lg:max-w-[600px] lg:mx-auto text-smallTextColor font-[500] text-[16px] leading-7">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, quia
             incidunt. Ullam porro totam et officiis! Assumenda libero iure
             repudiandae nam, similique id doloremque mollitia dolore veritatis
@@ -39,7 +40,7 @@ const Services = () => {
                         <h3 className="text-primaryColor font-[700] mb-3 group-hover:text-white group-hover:font-[600] text-xl">
                           Frontend Development
                         </h3>
-                        <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-7">
+                        <p className="text-[15px] text-[#081e21] group-hover:text-white group-hover:font-[500] leading-7">
                           Lorem ipsum, dolor sit amet consectetur adipisicing
                           elit. Optio enim aliquid ratione velit quaerat beatae.
                         </p>
@@ -67,7 +68,7 @@ const Services = () => {
                         <h3 className="text-primaryColor font-[700] mb-3 group-hover:text-white group-hover:font-[600] text-xl">
                           Backend Development
                         </h3>
-                        <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-7">
+                        <p className="text-[15px] text-[#081e21] group-hover:text-white group-hover:font-[500] leading-7">
                           Lorem ipsum, dolor sit amet consectetur adipisicing
                           elit. Optio enim aliquid ratione velit quaerat beatae.
                         </p>
@@ -94,7 +95,7 @@ const Services = () => {
                         <h3 className="text-primaryColor font-[700] mb-3 group-hover:text-white group-hover:font-[600] text-xl">
                           UI/UX Design
                         </h3>
-                        <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-7">
+                        <p className="text-[15px] text-[#081e21] group-hover:text-white group-hover:font-[500] leading-7">
                           Lorem ipsum, dolor sit amet consectetur adipisicing
                           elit. Optio enim aliquid ratione velit quaerat beatae.
                         </p>
@@ -122,7 +123,7 @@ const Services = () => {
                         <h3 className="text-primaryColor font-[700] mb-3 group-hover:text-white group-hover:font-[600] text-xl">
                           Apps Development
                         </h3>
-                        <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-7">
+                        <p className="text-[15px] text-[#081e21] group-hover:text-white group-hover:font-[500] leading-7">
                           Lorem ipsum, dolor sit amet consectetur adipisicing
                           elit. Optio enim aliquid ratione velit quaerat beatae.
                         </p>

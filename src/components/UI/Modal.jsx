@@ -1,6 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import portfolios from "../../assets/data/portfolioData";
 
+// eslint-disable-next-line react/prop-types
 const MOdal = ({ activeID, setShowModal }) => {
   const portfolio = portfolios.find((portfolio) => portfolio.id === activeID);
   return (
@@ -14,9 +16,9 @@ const MOdal = ({ activeID, setShowModal }) => {
         <div>
           <h2 className="text-2xl text-headingColor font-[700] my-5">{portfolio.title}</h2>
 
-          <p className="text-[15px] leading-7 text-smallTextColor">{portfolio.description}</p>
+          <p className="text-[15px] leading-7 text-[#193256]">{portfolio.description}</p>
           <div className="mt-5 flex items-center gap-3 text-[18px] flex-wrap">
-            <h4 className="text-headingColor text-[18px] text-[700]">Technologies: </h4>
+            <h4 className="text-[#081e21] text-[18px] text-[700]">Technologies: </h4>
             {
               portfolio.technologies.map((item, index) => (
                 <span key={index} className="bg-gray-200 py-1 px-2 rounded-[5px] text-[14px] leading-0">{item}</span>

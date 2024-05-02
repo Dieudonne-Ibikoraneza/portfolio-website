@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 
 const Footer = () => {
@@ -14,8 +15,8 @@ const Footer = () => {
               Do you want to make beautiful products
             </h2>
             <a href="#contact">
-              <button className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px]">
-                <i className="ri-mail-line"></i> Hire me
+              <button className="linear-button h-[50px] py-[0.8em] pr-[1.3em] pl-[0.9em] footer-button">
+                <i className="ri-mail-line"></i> <span className="footer-button-text"> Hire me</span>
               </button>
             </a>
           </div>
