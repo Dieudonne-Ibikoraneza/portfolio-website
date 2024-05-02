@@ -9,7 +9,7 @@ import Hero from "./components/UI/Hero";
 import Services from "./components/UI/Services";
 import Portfolio from "./components/UI/Portfolio";
 import Contact from "./components/UI/Contact";
-// import ScrollProgressIndicator from "./components/ScrollProgressIndicator";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   useEffect(() => {
@@ -25,6 +25,7 @@ function App() {
       <Contact />
     </main>
     <Footer />
+    <ScrollToTop />
   </>;
 }
 
